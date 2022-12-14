@@ -39,10 +39,30 @@ body {
   box-sizing: border-box;
 }
 
-.frase-intro {
+.frase-bg {
   background: #424242;
   color: #fff;
-  text-align: center;
+}
+
+.frase-intro  {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.frase-intro a {
+  display: flex;
+  align-items: center;
+}
+
+.frase-intro img {
+  width: 20px;
+  height: 20px;
+  display:inline-block;
+  margin-right: 12px;
 }
 
 .header-menu {
@@ -641,7 +661,7 @@ body {
 
 
 
-/* javascript efeitos */
+/* javascript tabcontent efeitos */
 
 
 .js-tabmenu li.ativo {
@@ -669,5 +689,21 @@ body {
   }
 }
 
+/* simple slide animação javascript */
 
+[data-slide] {
+  position: relative;
+}
+
+[data-slide] > * {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+}
+[data-slide] > .active {
+  position: relative;
+  opacity: 1;
+  transition: opacity 500ms;
+  z-index: 1;
+}
 
